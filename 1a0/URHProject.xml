@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<UniversalRadioHackerProject description="" collapse_project_tabs="0" modulation_was_edited="0" broadcast_address_hex="ffff">
+  <modulators>
+    <modulator carrier_freq_hz="4760.7421875" carrier_amplitude="1.0" carrier_phase_deg="0.0" samples_per_symbol="200" name="Modulator" gauss_bt="0.5" gauss_filter_width="1.0" sample_rate="2000000.0" modulation_type="ASK" index="0" parameters="0.0,100.0" bits_per_symbol="1"/>
+  </modulators>
+  <device_conf>
+    <apply_dc_correction>True</apply_dc_correction>
+    <bandwidth>2000000.0</bandwidth>
+    <bias_tee_enabled>False</bias_tee_enabled>
+    <freq_correction>1</freq_correction>
+    <frequency>433920000.0</frequency>
+    <name>HackRF</name>
+    <num_sending_repeats>0</num_sending_repeats>
+    <sample_rate>2000000.0</sample_rate>
+    <tx_antenna_index>-1</tx_antenna_index>
+    <tx_baseband_gain>16</tx_baseband_gain>
+    <tx_gain>0</tx_gain>
+    <tx_if_gain>23</tx_if_gain>
+  </device_conf>
+  <simulator_rx_conf/>
+  <simulator_tx_conf/>
+  <signal name="23a33tercera" filename="../2604/23a33tercera.complex" samples_per_symbol="100" center="0" center_spacing="1" tolerance="5" noise_threshold="0" noise_minimum="0" noise_maximum="0" modulation_type="FSK" sample_rate="2000000.0" pause_threshold="8" message_length_divisor="1" bits_per_symbol="1" costas_loop_bandwidth="0.1">
+    <messages/>
+  </signal>
+  <open_file name="../2604/23a33tercera.complex" position="0"/>
+  <signal name="174" filename="174" samples_per_symbol="100" center="0" center_spacing="1" tolerance="5" noise_threshold="0" noise_minimum="0" noise_maximum="0" modulation_type="FSK" sample_rate="2000000.0" pause_threshold="8" message_length_divisor="1" bits_per_symbol="1" costas_loop_bandwidth="0.1">
+    <messages/>
+  </signal>
+  <open_file name="174" position="1"/>
+  <group name="New Group" id="0">
+    <cf_protocol filename="../2604/23a33tercera.complex"/>
+    <cf_protocol filename="174"/>
+  </group>
+  <protocol>
+    <decodings>
+      <decoding>'Non Return To Zero (NRZ)', </decoding>
+      <decoding>'Non Return To Zero + Invert', 'Invert', </decoding>
+      <decoding>'Manchester I', 'Edge Trigger', </decoding>
+      <decoding>'Manchester II', 'Edge Trigger', 'Invert', </decoding>
+      <decoding>'Differential Manchester', 'Edge Trigger', 'Differential Encoding', </decoding>
+    </decodings>
+    <participants/>
+    <messages>
+      <message message_type_id="64e2a246-1a5f-453e-9078-ade908e711f9" modulator_index="0" pause="635" timestamp="0.0009155" decoding_index="0"/>
+      <message message_type_id="64e2a246-1a5f-453e-9078-ade908e711f9" modulator_index="0" pause="2255" timestamp="1e-06" decoding_index="0"/>
+    </messages>
+    <message_types>
+      <message_type name="Default" id="64e2a246-1a5f-453e-9078-ade908e711f9" assigned_by_ruleset="0" assigned_by_logic_analyzer="0">
+        <ruleset mode="0"/>
+      </message_type>
+    </message_types>
+  </protocol>
+  <simulator_config>
+    <items/>
+  </simulator_config>
+</UniversalRadioHackerProject>
